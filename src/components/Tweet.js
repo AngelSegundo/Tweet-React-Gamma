@@ -1,8 +1,8 @@
-function Tweet() {
+function Tweet(props) {
   return (
     <div className="tweet">
       <img
-        src="https://www.tecnoempleo.com/logotipos/202114.png?02"
+        src={props.tweet.user.image}
         className="profile"
         alt="profile"
       />
@@ -10,15 +10,15 @@ function Tweet() {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">GammaTech</span>
-            <span className="handle">@gammatech</span>
+            <span className="name">{props.tweet.user.name}</span>
+            <span className="handle">@{props.tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">Dec 06, 2022</span>
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          Tendremos los vinilos en clase para la vuelta del puente
+          {props.tweet.message}
         </p>
 
         <div className="actions">
