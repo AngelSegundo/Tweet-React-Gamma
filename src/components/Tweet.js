@@ -1,3 +1,4 @@
+import Message from "./Message";
 import ProfileImage from "./ProfileImage";
 import Timestamp from "./Timestamp";
 import User from "./User";
@@ -19,7 +20,7 @@ function Tweet(props) {
         </div>
 
         <p className="message">
-          {props.tweet.message}
+          <Message message={props.tweet.message} />
         </p>
 
         <div className="actions">
